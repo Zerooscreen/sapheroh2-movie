@@ -1,0 +1,89 @@
+# Robots.txt for The Undertaker 2 Movie Website
+# Website: https://the-undertaker2-movie.vercel.app/
+# Updated: 2026-02-03
+
+# ========================================
+# ALLOW ALL SEARCH ENGINES
+# ========================================
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# ========================================
+# SPECIFIC SEARCH ENGINE RULES
+# ========================================
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Baidu Bot (Chinese Search Engine)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+
+# ========================================
+# BLOCK AI SCRAPING BOTS (Optional)
+# ========================================
+# Uncomment jika ingin blokir AI bots
+
+# OpenAI GPT Bot
+# User-agent: GPTBot
+# Disallow: /
+
+# ChatGPT User Agent
+# User-agent: ChatGPT-User
+# Disallow: /
+
+# Common Crawl Bot
+# User-agent: CCBot
+# Disallow: /
+
+# Anthropic AI Bot
+# User-agent: anthropic-ai
+# Disallow: /
+
+# Claude Bot
+# User-agent: Claude-Web
+# Disallow: /
+
+# Google Bard/Gemini
+# User-agent: Google-Extended
+# Disallow: /
+
+# ========================================
+# SITEMAP LOCATION
+# ========================================
+
+Sitemap: https://the-undertaker2-movie.vercel.app/sitemap.xml
+
+# ========================================
+# ADDITIONAL INFORMATION
+# ========================================
+# Movie: The Undertaker 2: Afterlife (สัปเหร่อ 2)
+# Release: 2026
+# Language: Thai
+# Genre: Horror, Thriller
+# Built with: Astro + React
+# Deployed on: Vercel
+# Last updated: 2026-02-03

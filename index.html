@@ -10,13 +10,13 @@
     <meta property="og:image" content="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg">
     <title>ดูหนัง The Undertaker 2 (2026) สัปเหร่อ 2 เต็มเรื่อง HD</title>
     
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👻</text></svg>">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -27,9 +27,10 @@
         
         body {
             font-family: 'Sarabun', sans-serif;
-            background: linear-gradient(to bottom right, #1a0033, #000000, #330033);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
             color: white;
             overflow-x: hidden;
+            min-height: 100vh;
         }
         
         html {
@@ -41,40 +42,580 @@
             position: fixed;
             top: 0;
             left: 0;
-            height: 4px;
-            background: linear-gradient(to right, #ef4444, #ec4899, #a855f7);
-            z-index: 9999;
-            transition: width 0.3s ease;
+            height: 3px;
+            background: linear-gradient(90deg, #ff006e, #8338ec, #3a86ff);
+            z-index: 10000;
+            transition: width 0.1s linear;
         }
         
-        /* Glow Effect */
-        @keyframes glow {
-            0%, 100% {
-                text-shadow: 0 0 20px #8b5cf6, 0 0 40px #ec4899, 0 0 60px #f472b6;
-            }
-            50% {
-                text-shadow: 0 0 30px #8b5cf6, 0 0 60px #ec4899, 0 0 90px #f472b6;
-            }
-        }
-        
-        .glow-text {
-            animation: glow 2s ease-in-out infinite;
-        }
-        
-        /* Hover Effects */
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        
-        .hover-scale:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Glassmorphism */
-        .glass {
-            background: rgba(0, 0, 0, 0.3);
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 1400px;
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #a78bfa;
+            transform: scale(1.1);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            z-index: 1;
+        }
+        
+        .poster-container {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(236, 72, 153, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .poster-container:hover {
+            transform: scale(1.02);
+        }
+        
+        .poster-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #a78bfa, #ec4899, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 40px rgba(236, 72, 153, 0.5);
+        }
+        
+        .subtitle {
+            font-size: 2rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .badge {
+            background: rgba(167, 139, 250, 0.2);
+            border: 1px solid rgba(167, 139, 250, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+        }
+        
+        .watch-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .watch-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 60px rgba(236, 72, 153, 0.9);
+        }
+        
+        .watch-btn svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+            margin-left: 5px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 60px rgba(236, 72, 153, 0.9), 0 0 80px rgba(139, 92, 246, 0.5);
+            }
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .detail-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(167, 139, 250, 0.3);
+        }
+        
+        .detail-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #a78bfa;
+        }
+        
+        .detail-card p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        /* Trailer Section */
+        .trailer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2rem;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Cast Grid */
+        .cast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 2rem;
+        }
+        
+        .cast-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 1rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .cast-card:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.4);
+        }
+        
+        .cast-photo {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cast-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .cast-character {
+            font-size: 0.875rem;
+            color: #a78bfa;
+            text-align: center;
+        }
+        
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.3);
+        }
+        
+        .review-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .reviewer-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #a78bfa;
+        }
+        
+        .review-info h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stars {
+            color: #fbbf24;
+            font-size: 1.125rem;
+        }
+        
+        .review-date {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        .review-content {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-title {
+            font-weight: 700;
+            color: #a78bfa;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: #a78bfa;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #a78bfa;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            font-size: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+        }
+        
+        /* Scroll to Top */
+        #scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(236, 72, 153, 0.5);
+            transition: all 0.3s;
+            display: none;
+        }
+        
+        #scroll-top:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(167, 139, 250, 0.3);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #ef4444;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .modal-close:hover {
+            transform: rotate(90deg);
+            background: #dc2626;
+        }
+        
+        .modal-cast-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #a78bfa;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+        
+        .modal-cast-name {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .modal-cast-character {
+            text-align: center;
+            color: #a78bfa;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .details-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cast-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu a:hover {
+            color: #a78bfa;
+            padding-left: 1.5rem;
         }
         
         /* Custom Scrollbar */
@@ -83,410 +624,230 @@
         }
         
         ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
+            background: #1a1a2e;
         }
         
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #ef4444, #a855f7, #ec4899);
-            border-radius: 6px;
+            background: linear-gradient(135deg, #8b5cf6, #ec4899);
+            border-radius: 10px;
         }
         
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px);
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-        
-        .modal.active {
-            display: flex;
-        }
-        
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease-out;
-        }
-        
-        /* Pulse Animation for Watch Button */
-        @keyframes pulse-ring {
-            0% {
-                transform: scale(1);
-                opacity: 0.75;
-            }
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-        
-        .pulse-ring {
-            animation: pulse-ring 2s infinite;
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, #7c3aed, #db2777);
         }
     </style>
 </head>
 <body>
     <!-- Progress Bar -->
-    <div id="progress-bar"></div>
+    <div id="progress-bar" style="width: 0%"></div>
     
     <!-- Navbar -->
-    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-7xl z-50 glass rounded-2xl shadow-2xl">
-        <div class="px-6 md:px-8 py-4">
-            <div class="flex justify-between items-center">
-                <button onclick="scrollToSection('home')" class="text-2xl md:text-3xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent glow-text">
-                    👻 สัปเหร่อ 2 โลกหลังความตาย
-                </button>
-                
-                <ul class="hidden md:flex space-x-8 text-lg font-semibold">
-                    <li><button onclick="scrollToSection('home')" class="hover:text-purple-400 transition-all hover:scale-110">หน้าแรก</button></li>
-                    <li><button onclick="scrollToSection('details')" class="hover:text-purple-400 transition-all hover:scale-110">รายละเอียด</button></li>
-                    <li><button onclick="scrollToSection('cast')" class="hover:text-purple-400 transition-all hover:scale-110">นักแสดง</button></li>
-                    <li><button onclick="scrollToSection('trailer')" class="hover:text-purple-400 transition-all hover:scale-110">ตัวอย่าง</button></li>
-                </ul>
-                
-                <!-- Mobile Menu Toggle -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">☰</button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 glass rounded-xl p-6 space-y-4">
-                <button onclick="scrollToSection('home')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">หน้าแรก</button>
-                <button onclick="scrollToSection('details')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">รายละเอียด</button>
-                <button onclick="scrollToSection('cast')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">นักแสดง</button>
-                <button onclick="scrollToSection('trailer')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">ตัวอย่าง</button>
-            </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">👻 สัปเหร่อ 2</div>
+            <ul class="nav-links">
+                <li><a href="#home">หน้าแรก</a></li>
+                <li><a href="#details">รายละเอียด</a></li>
+                <li><a href="#cast">นักแสดง</a></li>
+                <li><a href="#trailer">ตัวอย่าง</a></li>
+                <li><a href="#reviews">รีวิว</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home" onclick="toggleMobileMenu()">หน้าแรก</a>
+            <a href="#details" onclick="toggleMobileMenu()">รายละเอียด</a>
+            <a href="#cast" onclick="toggleMobileMenu()">นักแสดง</a>
+            <a href="#trailer" onclick="toggleMobileMenu()">ตัวอย่าง</a>
+            <a href="#reviews" onclick="toggleMobileMenu()">รีวิว</a>
         </div>
     </nav>
     
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center px-6 py-20">
-        <div class="relative z-10 max-w-6xl mx-auto text-center space-y-8 fade-in">
-            <!-- Movie Poster -->
-            <div class="relative mx-auto mb-8 max-w-4xl hover-scale">
-                <div class="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-purple-500/30">
-                    <img
-                        src="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg"
-                        alt="The Undertaker 2"
-                        class="w-full h-auto object-cover"
-                        style="aspect-ratio: 16/9;"
-                        loading="eager"
-                    />
-                </div>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="poster-container">
+                <img src="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg" alt="The Undertaker 2" loading="eager">
             </div>
             
-            <!-- Title -->
-            <h1 class="text-6xl md:text-8xl font-black mb-6">
-                <span class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
-                    สัปเหร่อ 2 โลกหลังความตาย
-                </span>
-            </h1>
+            <h1>สัปเหร่อ 2 โลกหลังความตาย</h1>
+            <p class="subtitle">The Undertaker 2: Afterlife</p>
             
-            <!-- Subtitle -->
-            <p class="text-2xl md:text-4xl mb-8 opacity-90">
-                The Undertaker 2: Afterlife
-            </p>
-            
-            <!-- Info Badges -->
-            <div class="flex flex-wrap items-center justify-center gap-6 mb-12">
-                <span class="bg-purple-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
-                    📅 2026
-                </span>
-                <span class="bg-pink-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
-                    ⭐ 8.5/10
-                </span>
-                <span class="bg-red-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
-                    🎬 120 นาที
-                </span>
+            <div class="badges">
+                <span class="badge">📅 2026</span>
+                <span class="badge">⭐ 8.5/10</span>
+                <span class="badge">🎬 120 นาที</span>
             </div>
             
-            <!-- Watch Button -->
-            <div class="flex items-center justify-center gap-6">
-                <a href="https://t.co/v5rZ3cG8Z5" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 pulse-ring"></div>
-                    <button class="relative bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white w-24 h-24 rounded-full font-bold shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center">
-                        <svg class="w-12 h-12 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </button>
-                </a>
-            </div>
+            <a href="https://t.co/v5rZ3cG8Z5" target="_blank" rel="noopener noreferrer">
+                <button class="watch-btn">
+                    <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+            </a>
         </div>
     </section>
     
     <!-- Details Section -->
-    <section id="details" class="py-24 px-6 glass">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent glow-text">
-                📋 รายละเอียด
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <div class="space-y-6 glass p-8 rounded-3xl hover-scale">
-                    <h3 class="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
-                        📃 ข้อมูลทั่วไป
-                    </h3>
-                    <div class="space-y-4 text-xl">
-                        <p><strong>ประเภท:</strong> สยองขวัญ, ระทึกขวัญ, ลึกลับ</p>
-                        <p><strong>สถานะ:</strong> กำลังจะฉาย</p>
-                        <p><strong>คะแนน:</strong> 8.5/10</p>
-                        <p><strong>ระยะเวลา:</strong> 120 นาที</p>
-                    </div>
-                </div>
-                <div class="glass p-8 rounded-3xl hover-scale">
-                    <h3 class="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-                        🎭 ทีมผู้สร้าง
-                    </h3>
-                    <div class="grid grid-cols-1 gap-4">
-                        <div class="glass p-4 rounded-xl hover-scale">
-                            <p class="font-semibold">ทรงยศ สุขมากอนันต์</p>
-                            <p class="text-sm opacity-75">ผู้กำกับ</p>
-                        </div>
-                        <div class="glass p-4 rounded-xl hover-scale">
-                            <p class="font-semibold">สมชาย ลีลานุภาพ</p>
-                            <p class="text-sm opacity-75">ผู้ผลิต</p>
-                        </div>
-                        <div class="glass p-4 rounded-xl hover-scale">
-                            <p class="font-semibold">วิชัย แสงจันทร์</p>
-                            <p class="text-sm opacity-75">บทภาพยนตร์</p>
-                        </div>
-                    </div>
-                </div>
+    <section id="details">
+        <h2 class="section-title">📋 รายละเอียด</h2>
+        <div class="details-grid">
+            <div class="detail-card">
+                <h3>📃 ข้อมูลทั่วไป</h3>
+                <p><strong>ประเภท:</strong> สยองขวัญ, ระทึกขวัญ, ลึกลับ</p>
+                <p><strong>สถานะ:</strong> กำลังจะฉาย</p>
+                <p><strong>คะแนน:</strong> 8.5/10</p>
+                <p><strong>ระยะเวลา:</strong> 120 นาที</p>
+                <p><strong>เรื่องย่อ:</strong> ภาคต่อของภาพยนตร์สยองขวัญไทยชื่อดัง เรื่องราวของโลกหลังความตายที่จะทำให้คุณสะท้านสยอง พบกับการผจญภัยที่น่าสะพรึงกลัวในมิติที่ไม่มีใครเคยรู้</p>
+            </div>
+            
+            <div class="detail-card">
+                <h3>🎭 ทีมผู้สร้าง</h3>
+                <p><strong>ผู้กำกับ:</strong> ทรงยศ สุขมากอนันต์</p>
+                <p><strong>ผู้ผลิต:</strong> สมชาย ลีลานุภาพ</p>
+                <p><strong>บทภาพยนตร์:</strong> วิชัย แสงจันทร์</p>
+                <p><strong>ผู้กำกับภาพ:</strong> ประวิทย์ สุดารักษ์</p>
+                <p><strong>ตัดต่อ:</strong> นันทนา วรรณศิลป์</p>
+                <p><strong>ดนตรี:</strong> อรุณ สุขสันต์</p>
             </div>
         </div>
     </section>
     
     <!-- Trailer Section -->
-    <section id="trailer" class="relative py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-5xl md:text-7xl font-black text-center mb-16 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 bg-clip-text text-transparent glow-text">
-                🎬 ตัวอย่าง
-            </h2>
-            
-            <div class="glass p-6 md:p-12 rounded-3xl shadow-3xl hover-scale">
-                <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        src="https://www.youtube.com/embed/dD411PPZkPs?rel=0"
-                        title="Movie Trailer"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                        class="w-full h-full"
-                        loading="lazy"
-                    ></iframe>
-                </div>
+    <section id="trailer">
+        <h2 class="section-title">🎬 ตัวอย่าง</h2>
+        <div class="trailer-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/dD411PPZkPs?rel=0" title="Movie Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             </div>
         </div>
     </section>
     
     <!-- Cast Section -->
-    <section id="cast" class="py-24 px-6 glass">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                🎭 นักแสดง | Cast
-            </h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                <!-- Cast Member 1 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Thanwaporn Nasombat', 'บุญหนา', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s" alt="Thanwaporn Nasombat" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Thanwaporn Nasombat</h3>
-                    <p class="text-xs text-center opacity-70">บุญหนา</p>
-                </div>
-                
-                <!-- Cast Member 2 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Chatchai Chinnasri', 'วิชัย', 'https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg" alt="Chatchai Chinnasri" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Chatchai Chinnasri</h3>
-                    <p class="text-xs text-center opacity-70">วิชัย</p>
-                </div>
-                
-                <!-- Cast Member 3 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Naruepol Yaiim', 'พล', 'https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg" alt="Naruepol Yaiim" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Naruepol Yaiim</h3>
-                    <p class="text-xs text-center opacity-70">พล</p>
-                </div>
-                
-                <!-- Cast Member 4 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Eisaya Hosuwan', 'มินตรา', 'https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg" alt="Eisaya Hosuwan" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Eisaya Hosuwan</h3>
-                    <p class="text-xs text-center opacity-70">มินตรา</p>
-                </div>
-                
-                <!-- Cast Member 5 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Phuwasit Ananbhornsiri', 'สายฝน', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg" alt="Phuwasit Ananbhornsiri" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Phuwasit Ananbhornsiri</h3>
-                    <p class="text-xs text-center opacity-70">สายฝน</p>
-                </div>
-                
-                <!-- Cast Member 6 -->
-                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Natthawut Saenyabut', 'นภัสสร', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg')">
-                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
-                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg" alt="Natthawut Saenyabut" class="w-full h-full object-cover" />
-                    </div>
-                    <h3 class="font-bold text-center text-sm mb-1">Natthawut Saenyabut</h3>
-                    <p class="text-xs text-center opacity-70">นภัสสร</p>
-                </div>
+    <section id="cast">
+        <h2 class="section-title">🎭 นักแสดง</h2>
+        <div class="cast-grid">
+            <div class="cast-card" onclick="showCastModal('Thanwaporn Nasombat', 'บุญหนา', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s" alt="Thanwaporn Nasombat" class="cast-photo">
+                <div class="cast-name">Thanwaporn Nasombat</div>
+                <div class="cast-character">บุญหนา</div>
+            </div>
+            
+            <div class="cast-card" onclick="showCastModal('Chatchai Chinnasri', 'วิชัย', 'https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg')">
+                <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg" alt="Chatchai Chinnasri" class="cast-photo">
+                <div class="cast-name">Chatchai Chinnasri</div>
+                <div class="cast-character">วิชัย</div>
+            </div>
+            
+            <div class="cast-card" onclick="showCastModal('Naruepol Yaiim', 'พล', 'https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg')">
+                <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg" alt="Naruepol Yaiim" class="cast-photo">
+                <div class="cast-name">Naruepol Yaiim</div>
+                <div class="cast-character">พล</div>
+            </div>
+            
+            <div class="cast-card" onclick="showCastModal('Eisaya Hosuwan', 'มินตรา', 'https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg')">
+                <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg" alt="Eisaya Hosuwan" class="cast-photo">
+                <div class="cast-name">Eisaya Hosuwan</div>
+                <div class="cast-character">มินตรา</div>
+            </div>
+            
+            <div class="cast-card" onclick="showCastModal('Phuwasit Ananbhornsiri', 'สายฝน', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg')">
+                <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg" alt="Phuwasit Ananbhornsiri" class="cast-photo">
+                <div class="cast-name">Phuwasit Ananbhornsiri</div>
+                <div class="cast-character">สายฝน</div>
+            </div>
+            
+            <div class="cast-card" onclick="showCastModal('Natthawut Saenyabut', 'นภัสสร', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg')">
+                <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg" alt="Natthawut Saenyabut" class="cast-photo">
+                <div class="cast-name">Natthawut Saenyabut</div>
+                <div class="cast-character">นภัสสร</div>
             </div>
         </div>
     </section>
     
     <!-- Reviews Section -->
-    <section id="reviews" class="py-24 px-6 glass">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
-                💬 รีวิว | Reviews
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Review 1 -->
-                <div class="glass p-8 rounded-2xl shadow-2xl hover-scale">
-                    <div class="flex items-start gap-4 mb-6">
-                        <img src="https://i.pravatar.cc/150?img=12" alt="สมชาย ใจดี" class="w-16 h-16 rounded-full object-cover border-4 border-purple-400" />
-                        <div class="flex-1">
-                            <h3 class="font-bold text-xl mb-1">สมชาย ใจดี</h3>
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="flex gap-1">
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                </div>
-                                <span class="font-bold text-lg">9.5/10</span>
-                            </div>
-                            <p class="text-sm opacity-70">📅 15 มกราคม 2026</p>
-                        </div>
-                    </div>
-                    <div class="glass p-6 rounded-xl mb-6">
-                        <h4 class="font-bold text-lg mb-3 text-purple-400">สยองขวัญที่ลึกซึ้งและน่าติดตาม</h4>
-                        <p class="leading-relaxed opacity-90">ภาคต่อที่ดีกว่าภาคแรก! บรรยากาศสยองขวัญเข้มข้น การแสดงของนักแสดงทุกคนยอดเยี่ยม โดยเฉพาะฉากในโลกหลังความตาย ทำให้ขนลุกจริงๆ เอฟเฟกต์พิเศษก็สมจริงมาก แนะนำเลยครับ</p>
+    <section id="reviews">
+        <h2 class="section-title">💬 รีวิว</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="สมชาย ใจดี" class="reviewer-photo">
+                    <div class="review-info">
+                        <h4>สมชาย ใจดี</h4>
+                        <div class="stars">⭐⭐⭐⭐⭐ 9.5/10</div>
+                        <div class="review-date">📅 15 มกราคม 2026</div>
                     </div>
                 </div>
-                
-                <!-- Review 2 -->
-                <div class="glass p-8 rounded-2xl shadow-2xl hover-scale">
-                    <div class="flex items-start gap-4 mb-6">
-                        <img src="https://i.pravatar.cc/150?img=5" alt="นันทนา วรรณา" class="w-16 h-16 rounded-full object-cover border-4 border-purple-400" />
-                        <div class="flex-1">
-                            <h3 class="font-bold text-xl mb-1">นันทนา วรรณา</h3>
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="flex gap-1">
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-yellow-400">⭐</span>
-                                    <span class="text-xl text-gray-400">⭐</span>
-                                </div>
-                                <span class="font-bold text-lg">8.5/10</span>
-                            </div>
-                            <p class="text-sm opacity-70">📅 18 มกราคม 2026</p>
-                        </div>
+                <div class="review-content">
+                    <div class="review-title">สยองขวัญที่ลึกซึ้งและน่าติดตาม</div>
+                    <p>ภาคต่อที่ดีกว่าภาคแรก! บรรยากาศสยองขวัญเข้มข้น การแสดงของนักแสดงทุกคนยอดเยี่ยม โดยเฉพาะฉากในโลกหลังความตาย ทำให้ขนลุกจริงๆ เอฟเฟกต์พิเศษก็สมจริงมาก แนะนำเลยครับ</p>
+                </div>
+            </div>
+            
+            <div class="review-card">
+                <div class="review-header">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="นันทนา วรรณา" class="reviewer-photo">
+                    <div class="review-info">
+                        <h4>นันทนา วรรณา</h4>
+                        <div class="stars">⭐⭐⭐⭐ 8.5/10</div>
+                        <div class="review-date">📅 18 มกราคม 2026</div>
                     </div>
-                    <div class="glass p-6 rounded-xl mb-6">
-                        <h4 class="font-bold text-lg mb-3 text-purple-400">น่าติดตาม แต่บางฉากสยองเกินไป</h4>
-                        <p class="leading-relaxed opacity-90">ชอบมากค่ะ โครงเรื่องน่าสนใจ การเล่าเรื่องลื่นไหลดี แต่บางฉากสยองเกินไปสำหรับคนที่กลัวผีมากๆ อย่างเราค่ะ 😅 แต่โดยรวมแล้วถือว่าดีมากเลย คุ้มค่ากับเงินที่จ่ายไป</p>
-                    </div>
+                </div>
+                <div class="review-content">
+                    <div class="review-title">น่าติดตาม แต่บางฉากสยองเกินไป</div>
+                    <p>ชอบมากค่ะ โครงเรื่องน่าสนใจ การเล่าเรื่องลื่นไหลดี แต่บางฉากสยองเกินไปสำหรับคนที่กลัวผีมากๆ อย่างเราค่ะ 😅 แต่โดยรวมแล้วถือว่าดีมากเลย คุ้มค่ากับเงินที่จ่ายไป</p>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="glass py-12 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <!-- About -->
-                <div>
-                    <h3 class="font-bold text-xl mb-4 text-purple-300">เกี่ยวกับเรา</h3>
-                    <p class="opacity-80 leading-relaxed">
-                        สัปเหร่อ 2 โลกหลังความตาย - ภาพยนตร์สยองขวัญไทยที่จะพาคุณไปสู่โลกที่คุณไม่เคยรู้จัก
-                    </p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="font-bold text-xl mb-4 text-purple-300">ลิงก์ด่วน</h3>
-                    <ul class="space-y-2 opacity-80">
-                        <li><button onclick="scrollToSection('home')" class="hover:text-purple-300 transition-colors">เกี่ยวกับภาพยนตร์</button></li>
-                        <li><button onclick="scrollToSection('trailer')" class="hover:text-purple-300 transition-colors">ตัวอย่าง</button></li>
-                        <li><button onclick="scrollToSection('cast')" class="hover:text-purple-300 transition-colors">นักแสดง</button></li>
-                        <li><button onclick="scrollToSection('reviews')" class="hover:text-purple-300 transition-colors">รีวิว</button></li>
-                    </ul>
-                </div>
-                
-                <!-- Social Media -->
-                <div>
-                    <h3 class="font-bold text-xl mb-4 text-purple-300">ติดตามเรา</h3>
-                    <div class="flex gap-4">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:scale-110 transition-transform">📘</a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:scale-110 transition-transform">📷</a>
-                    </div>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>เกี่ยวกับเรา</h3>
+                <p>สัปเหร่อ 2 โลกหลังความตาย - ภาพยนตร์สยองขวัญไทยที่จะพาคุณไปสู่โลกที่คุณไม่เคยรู้จัก</p>
             </div>
             
-            <!-- Bottom Bar -->
-            <div class="border-t border-white/10 pt-8 text-center opacity-60">
-                <p class="text-sm">Made with 💜 for Thai Horror Cinema</p>
+            <div class="footer-section">
+                <h3>ลิงก์ด่วน</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">เกี่ยวกับภาพยนตร์</a></li>
+                    <li><a href="#trailer">ตัวอย่าง</a></li>
+                    <li><a href="#cast">นักแสดง</a></li>
+                    <li><a href="#reviews">รีวิว</a></li>
+                </ul>
             </div>
+            
+            <div class="footer-section">
+                <h3>ติดตามเรา</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">📘</a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">📷</a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">📺</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>Made with 💜 for Thai Horror Cinema</p>
         </div>
     </footer>
     
     <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" onclick="scrollToTop()" class="fixed right-6 bottom-6 w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/20" style="display: none;">
-        ⬆️
-    </button>
+    <button id="scroll-top" onclick="scrollToTop()">⬆️</button>
     
     <!-- Cast Modal -->
     <div id="cast-modal" class="modal">
-        <div class="relative z-10 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="glass rounded-3xl border-2 border-purple-500 shadow-2xl p-8">
-                <!-- Close Button -->
-                <button onclick="closeCastModal()" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-red-500/80 hover:bg-red-600 text-white text-2xl font-bold hover:rotate-90 transition-all duration-300 shadow-xl z-10">
-                    ✕
-                </button>
-                
-                <!-- Cast Photo -->
-                <div class="flex flex-col items-center mb-6">
-                    <div class="relative w-48 h-48 mb-4">
-                        <img id="modal-cast-photo" src="" alt="" class="w-full h-full object-cover rounded-full border-4 border-purple-400 shadow-2xl" />
-                    </div>
-                    <h2 id="modal-cast-name" class="text-3xl font-bold text-center mb-2"></h2>
-                    <p id="modal-cast-character" class="text-xl text-purple-400 text-center mb-4"></p>
-                </div>
-            </div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCastModal()">✕</button>
+            <img id="modal-photo" src="" alt="" class="modal-cast-photo">
+            <h2 id="modal-name" class="modal-cast-name"></h2>
+            <p id="modal-character" class="modal-cast-character"></p>
         </div>
     </div>
     
     <!-- Histats Analytics -->
-    <script type="text/javascript">
+    <script>
     var _Hasync= _Hasync|| [];
     _Hasync.push(['Histats.start', '1,4973373,4,1,120,40,00011000']);
     _Hasync.push(['Histats.fasi', '1']);
@@ -502,27 +863,18 @@
     <script>
         // Progress Bar
         window.addEventListener('scroll', function() {
-            const progress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-            document.getElementById('progress-bar').style.width = (progress * 100) + '%';
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
             
-            // Show/Hide Scroll to Top Button
-            const scrollTopBtn = document.getElementById('scroll-to-top');
-            if (window.scrollY > 500) {
-                scrollTopBtn.style.display = 'block';
+            // Show/Hide Scroll to Top
+            if (winScroll > 500) {
+                document.getElementById('scroll-top').style.display = 'block';
             } else {
-                scrollTopBtn.style.display = 'none';
+                document.getElementById('scroll-top').style.display = 'none';
             }
         });
-        
-        // Smooth Scroll
-        function scrollToSection(sectionId) {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-            }
-            // Close mobile menu if open
-            document.getElementById('mobile-menu').classList.add('hidden');
-        }
         
         // Scroll to Top
         function scrollToTop() {
@@ -532,15 +884,15 @@
         // Toggle Mobile Menu
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('active');
         }
         
         // Cast Modal
         function showCastModal(name, character, photo) {
-            document.getElementById('modal-cast-name').textContent = name;
-            document.getElementById('modal-cast-character').textContent = 'as ' + character;
-            document.getElementById('modal-cast-photo').src = photo;
-            document.getElementById('modal-cast-photo').alt = name;
+            document.getElementById('modal-name').textContent = name;
+            document.getElementById('modal-character').textContent = 'as ' + character;
+            document.getElementById('modal-photo').src = photo;
+            document.getElementById('modal-photo').alt = name;
             document.getElementById('cast-modal').classList.add('active');
         }
         
@@ -548,30 +900,22 @@
             document.getElementById('cast-modal').classList.remove('active');
         }
         
-        // Close modal when clicking outside
+        // Close modal on outside click
         document.getElementById('cast-modal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeCastModal();
             }
         });
         
-        // Fade in elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
-        }, observerOptions);
-        
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>

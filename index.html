@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ดูหนัง สัปเหร่อ 2 โลกหลังความตาย (The Undertaker 2: Afterlife) ภาพยนตร์สยองขวัญไทยภาคต่อที่คุณไม่ควรพลาด กำลังจะฉายปี 2026 ดูออนไลน์เต็มเรื่อง HD พากย์ไทย ซับไทย">
-    <meta name="keywords" content="สัปเหร่อ 2, The Undertaker 2, Afterlife, โลกหลังความตาย, หนังไทย, หนังสยองขวัญ, ภาพยนตร์ไทย, 2026, ดูหนังออนไลน์, ดูหนังเต็มเรื่อง, พากย์ไทย, ซับไทย">
-    <meta name="theme-color" content="#1a0d2e">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="ดูหนัง The Undertaker 2 (2026) สัปเหร่อ 2 เต็มเรื่อง HD พากย์ไทย ซับไทย">
-    <meta property="og:description" content="ดูหนัง สัปเหร่อ 2 โลกหลังความตาย (The Undertaker 2: Afterlife) ภาพยนตร์สยองขวัญไทยภาคต่อที่คุณไม่ควรพลาด กำลังจะฉายปี 2026 ดูออนไลน์เต็มเรื่อง HD พากย์ไทย ซับไทย">
-    <meta property="og:type" content="website">
+    <meta name="description" content="ดูหนัง สัปเหร่อ 2 โลกหลังความตาย (The Undertaker 2: Afterlife) ภาพยนตร์สยองขวัญไทยภาคต่อที่คุณไม่ควรพลาด กำลังจะฉายปี 2026">
+    <meta name="keywords" content="สัปเหร่อ 2, The Undertaker 2, Afterlife, โลกหลังความตาย, หนังไทย, หนังสยองขวัญ, 2026">
+    <meta property="og:title" content="ดูหนัง The Undertaker 2 (2026) สัปเหร่อ 2 เต็มเรื่อง HD">
+    <meta property="og:description" content="ดูหนัง สัปเหร่อ 2 โลกหลังความตาย (The Undertaker 2: Afterlife) ภาพยนตร์สยองขวัญไทยภาคต่อที่คุณไม่ควรพลาด">
     <meta property="og:image" content="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg">
+    <title>ดูหนัง The Undertaker 2 (2026) สัปเหร่อ 2 เต็มเรื่อง HD</title>
     
-    <title>ดูหนัง The Undertaker 2 (2026) สัปเหร่อ 2 เต็มเรื่อง HD พากย์ไทย ซับไทย</title>
-    
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
         * {
@@ -26,608 +24,468 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --bg-dark: #030303;
-            --bg-card: #141414;
-            --text-primary: #f8f8f8;
-            --text-secondary: #868686;
-            --accent-purple: #9333ea;
-            --accent-pink: #ec4899;
-            --accent-blue: #3b82f6;
-            --border-color: rgba(255, 255, 255, 0.1);
-        }
-
+        
         body {
-            font-family: 'Montserrat', Arial, sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: 'Sarabun', sans-serif;
+            background: linear-gradient(to bottom right, #1a0033, #000000, #330033);
+            color: white;
             overflow-x: hidden;
         }
-
-        /* Particle Background */
-        #particles {
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Progress Bar */
+        #progress-bar {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(147, 51, 234, 0.5);
-            border-radius: 50%;
-            animation: float 20s infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
-        }
-
-        /* Progress Scroll Bar */
-        #scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 0%;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-purple), var(--accent-pink));
+            background: linear-gradient(to right, #ef4444, #ec4899, #a855f7);
             z-index: 9999;
-            transition: width 0.1s ease;
+            transition: width 0.3s ease;
         }
-
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 1;
+        
+        /* Glow Effect */
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px #8b5cf6, 0 0 40px #ec4899, 0 0 60px #f472b6;
+            }
+            50% {
+                text-shadow: 0 0 30px #8b5cf6, 0 0 60px #ec4899, 0 0 90px #f472b6;
+            }
         }
-
-        /* Header */
-        header {
-            padding: 20px 0;
-            background: rgba(20, 20, 20, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid var(--border-color);
+        
+        .glow-text {
+            animation: glow 2s ease-in-out infinite;
         }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #fff, var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text .subtitle {
-            font-size: 24px;
-            color: var(--text-secondary);
-            margin-bottom: 10px;
-        }
-
-        .hero-text .year {
-            font-size: 18px;
-            color: var(--accent-pink);
-            margin-bottom: 30px;
-        }
-
-        .poster-container {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.3);
-        }
-
-        .poster-container img {
-            width: 100%;
-            height: auto;
-            display: block;
+        
+        /* Hover Effects */
+        .hover-scale {
             transition: transform 0.3s ease;
         }
-
-        .poster-container:hover img {
+        
+        .hover-scale:hover {
             transform: scale(1.05);
         }
-
-        /* Buttons */
-        .button-group {
-            display: flex;
-            gap: 15px;
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #ef4444, #a855f7, #ec4899);
+            border-radius: 6px;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
+            padding: 1rem;
         }
-
-        .btn {
-            padding: 15px 40px;
-            font-size: 18px;
-            font-weight: 700;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
-            color: white;
-            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(147, 51, 234, 0.6);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 2px solid var(--border-color);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: var(--accent-purple);
-        }
-
-        /* Section */
-        section {
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 40px;
-            text-align: center;
-            background: linear-gradient(135deg, #fff, var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Trailer Section */
-        .trailer-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(147, 51, 234, 0.3);
-        }
-
-        .trailer-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Movie Info */
-        .movie-info {
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .info-item h3 {
-            color: var(--accent-purple);
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .info-item p {
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .synopsis {
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-
-        /* Cast Grid */
-        .cast-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 30px;
-        }
-
-        .cast-card {
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .cast-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .cast-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent-purple);
-            margin-bottom: 15px;
-            box-shadow: 0 10px 30px rgba(147, 51, 234, 0.3);
-        }
-
-        .cast-name {
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .cast-character {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        /* Reviews */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .review-card {
-            background: var(--bg-card);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
-            border-color: var(--accent-purple);
-        }
-
-        .review-header {
+        
+        .modal.active {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
         }
-
-        .reviewer-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-purple);
-        }
-
-        .reviewer-name {
-            font-weight: 700;
-        }
-
-        .rating {
-            color: #fbbf24;
-            font-size: 18px;
-        }
-
-        /* Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            cursor: pointer;
-            aspect-ratio: 16/9;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-
-            .hero-text h1 {
-                font-size: 32px;
-            }
-
-            .hero-text .subtitle {
-                font-size: 18px;
-            }
-
-            .section-title {
-                font-size: 28px;
-            }
-
-            .cast-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-                gap: 20px;
-            }
-
-            .cast-avatar {
-                width: 120px;
-                height: 120px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-
-        /* Scroll Animation */
+        
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            animation: fadeIn 0.6s ease-out;
         }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        
+        /* Pulse Animation for Watch Button */
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 0.75;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        .pulse-ring {
+            animation: pulse-ring 2s infinite;
         }
     </style>
 </head>
 <body>
-    <!-- Progress Scroll Bar -->
-    <div id="scroll-progress"></div>
-
-    <!-- Particle Background -->
-    <div id="particles"></div>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">🎬 Movie Site</div>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+    
+    <!-- Navbar -->
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-7xl z-50 glass rounded-2xl shadow-2xl">
+        <div class="px-6 md:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <button onclick="scrollToSection('home')" class="text-2xl md:text-3xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent glow-text">
+                    👻 สัปเหร่อ 2 โลกหลังความตาย
+                </button>
+                
+                <ul class="hidden md:flex space-x-8 text-lg font-semibold">
+                    <li><button onclick="scrollToSection('home')" class="hover:text-purple-400 transition-all hover:scale-110">หน้าแรก</button></li>
+                    <li><button onclick="scrollToSection('details')" class="hover:text-purple-400 transition-all hover:scale-110">รายละเอียด</button></li>
+                    <li><button onclick="scrollToSection('cast')" class="hover:text-purple-400 transition-all hover:scale-110">นักแสดง</button></li>
+                    <li><button onclick="scrollToSection('trailer')" class="hover:text-purple-400 transition-all hover:scale-110">ตัวอย่าง</button></li>
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl">☰</button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 glass rounded-xl p-6 space-y-4">
+                <button onclick="scrollToSection('home')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">หน้าแรก</button>
+                <button onclick="scrollToSection('details')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">รายละเอียด</button>
+                <button onclick="scrollToSection('cast')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">นักแสดง</button>
+                <button onclick="scrollToSection('trailer')" class="block w-full text-left py-3 text-lg font-semibold hover:text-purple-400">ตัวอย่าง</button>
             </div>
         </div>
-    </header>
-
+    </nav>
+    
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <div class="hero-text">
-                    <h1>The Undertaker 2: Afterlife</h1>
-                    <p class="subtitle">สัปเหร่อ 2 โลกหลังความตาย</p>
-                    <p class="year">🎭 2026</p>
-                    <div class="button-group">
-                        <a href="https://t.co/v5r3cG8Z5" class="btn btn-primary" target="_blank">
-                            ▶️ ดูหนังเลย
-                        </a>
-                        <button class="btn btn-secondary" onclick="shareMovie()">
-                            🔗 แชร์
-                        </button>
+    <section id="home" class="relative min-h-screen flex items-center justify-center px-6 py-20">
+        <div class="relative z-10 max-w-6xl mx-auto text-center space-y-8 fade-in">
+            <!-- Movie Poster -->
+            <div class="relative mx-auto mb-8 max-w-4xl hover-scale">
+                <div class="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-purple-500/30">
+                    <img
+                        src="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg"
+                        alt="The Undertaker 2"
+                        class="w-full h-auto object-cover"
+                        style="aspect-ratio: 16/9;"
+                        loading="eager"
+                    />
+                </div>
+            </div>
+            
+            <!-- Title -->
+            <h1 class="text-6xl md:text-8xl font-black mb-6">
+                <span class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent drop-shadow-2xl">
+                    สัปเหร่อ 2 โลกหลังความตาย
+                </span>
+            </h1>
+            
+            <!-- Subtitle -->
+            <p class="text-2xl md:text-4xl mb-8 opacity-90">
+                The Undertaker 2: Afterlife
+            </p>
+            
+            <!-- Info Badges -->
+            <div class="flex flex-wrap items-center justify-center gap-6 mb-12">
+                <span class="bg-purple-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
+                    📅 2026
+                </span>
+                <span class="bg-pink-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
+                    ⭐ 8.5/10
+                </span>
+                <span class="bg-red-500/30 px-8 py-3 rounded-full text-xl font-bold backdrop-blur-xl border border-white/20">
+                    🎬 120 นาที
+                </span>
+            </div>
+            
+            <!-- Watch Button -->
+            <div class="flex items-center justify-center gap-6">
+                <a href="https://t.co/v5rZ3cG8Z5" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-xl opacity-75 group-hover:opacity-100 pulse-ring"></div>
+                    <button class="relative bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white w-24 h-24 rounded-full font-bold shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center">
+                        <svg class="w-12 h-12 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Details Section -->
+    <section id="details" class="py-24 px-6 glass">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-purple-400 via-pink-500 to-orange-400 bg-clip-text text-transparent glow-text">
+                📋 รายละเอียด
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6 glass p-8 rounded-3xl hover-scale">
+                    <h3 class="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+                        📃 ข้อมูลทั่วไป
+                    </h3>
+                    <div class="space-y-4 text-xl">
+                        <p><strong>ประเภท:</strong> สยองขวัญ, ระทึกขวัญ, ลึกลับ</p>
+                        <p><strong>สถานะ:</strong> กำลังจะฉาย</p>
+                        <p><strong>คะแนน:</strong> 8.5/10</p>
+                        <p><strong>ระยะเวลา:</strong> 120 นาที</p>
                     </div>
                 </div>
-                <div class="poster-container">
-                    <img src="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg" alt="The Undertaker 2 Poster">
+                <div class="glass p-8 rounded-3xl hover-scale">
+                    <h3 class="text-4xl font-bold mb-8 bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                        🎭 ทีมผู้สร้าง
+                    </h3>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="glass p-4 rounded-xl hover-scale">
+                            <p class="font-semibold">ทรงยศ สุขมากอนันต์</p>
+                            <p class="text-sm opacity-75">ผู้กำกับ</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl hover-scale">
+                            <p class="font-semibold">สมชาย ลีลานุภาพ</p>
+                            <p class="text-sm opacity-75">ผู้ผลิต</p>
+                        </div>
+                        <div class="glass p-4 rounded-xl hover-scale">
+                            <p class="font-semibold">วิชัย แสงจันทร์</p>
+                            <p class="text-sm opacity-75">บทภาพยนตร์</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Movie Info -->
-    <section>
-        <div class="container">
-            <h2 class="section-title fade-in">📋 รายละเอียดหนัง</h2>
-            <div class="movie-info fade-in">
-                <div class="info-grid">
-                    <div class="info-item">
-                        <h3>ปีที่ฉาย</h3>
-                        <p>2026</p>
+    
+    <!-- Trailer Section -->
+    <section id="trailer" class="relative py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-black text-center mb-16 bg-gradient-to-r from-red-500 via-purple-500 to-pink-500 bg-clip-text text-transparent glow-text">
+                🎬 ตัวอย่าง
+            </h2>
+            
+            <div class="glass p-6 md:p-12 rounded-3xl shadow-3xl hover-scale">
+                <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+                    <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/dD411PPZkPs?rel=0"
+                        title="Movie Trailer"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        class="w-full h-full"
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Cast Section -->
+    <section id="cast" class="py-24 px-6 glass">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+                🎭 นักแสดง | Cast
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <!-- Cast Member 1 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Thanwaporn Nasombat', 'บุญหนา', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf_-s6ANvuJnA1sHOr7-WGr3v-_yQZ82iDrA&s" alt="Thanwaporn Nasombat" class="w-full h-full object-cover" />
                     </div>
-                    <div class="info-item">
-                        <h3>ประเภท</h3>
-                        <p>สยองขวัญ, ระทึกขวัญ</p>
+                    <h3 class="font-bold text-center text-sm mb-1">Thanwaporn Nasombat</h3>
+                    <p class="text-xs text-center opacity-70">บุญหนา</p>
+                </div>
+                
+                <!-- Cast Member 2 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Chatchai Chinnasri', 'วิชัย', 'https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/tY0tYWIiKtGNB2w6CHP2cnubzNc.jpg" alt="Chatchai Chinnasri" class="w-full h-full object-cover" />
                     </div>
-                    <div class="info-item">
-                        <h3>ความยาว</h3>
-                        <p>120 นาที</p>
+                    <h3 class="font-bold text-center text-sm mb-1">Chatchai Chinnasri</h3>
+                    <p class="text-xs text-center opacity-70">วิชัย</p>
+                </div>
+                
+                <!-- Cast Member 3 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Naruepol Yaiim', 'พล', 'https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/3BNj8ElUHQYn4cOgWDbqQpoDAM.jpg" alt="Naruepol Yaiim" class="w-full h-full object-cover" />
                     </div>
-                    <div class="info-item">
-                        <h3>ภาษา</h3>
-                        <p>ไทย</p>
+                    <h3 class="font-bold text-center text-sm mb-1">Naruepol Yaiim</h3>
+                    <p class="text-xs text-center opacity-70">พล</p>
+                </div>
+                
+                <!-- Cast Member 4 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Eisaya Hosuwan', 'มินตรา', 'https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/svWWPIe9KmkAfFDFFTm3vH0zHfC.jpg" alt="Eisaya Hosuwan" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-bold text-center text-sm mb-1">Eisaya Hosuwan</h3>
+                    <p class="text-xs text-center opacity-70">มินตรา</p>
+                </div>
+                
+                <!-- Cast Member 5 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Phuwasit Ananbhornsiri', 'สายฝน', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z5P5tOhGxWeAvpHLplUdT6fi2ns.jpg" alt="Phuwasit Ananbhornsiri" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-bold text-center text-sm mb-1">Phuwasit Ananbhornsiri</h3>
+                    <p class="text-xs text-center opacity-70">สายฝน</p>
+                </div>
+                
+                <!-- Cast Member 6 -->
+                <div class="glass p-4 rounded-2xl shadow-2xl hover-scale cursor-pointer" onclick="showCastModal('Natthawut Saenyabut', 'นภัสสร', 'https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg')">
+                    <div class="relative overflow-hidden rounded-xl mb-3 aspect-square">
+                        <img src="https://media.themoviedb.org/t/p/w300_and_h450_face/z092jeqE4LY0FrqVUCZxpUMErai.jpg" alt="Natthawut Saenyabut" class="w-full h-full object-cover" />
+                    </div>
+                    <h3 class="font-bold text-center text-sm mb-1">Natthawut Saenyabut</h3>
+                    <p class="text-xs text-center opacity-70">นภัสสร</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 px-6 glass">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl md:text-6xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+                💬 รีวิว | Reviews
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Review 1 -->
+                <div class="glass p-8 rounded-2xl shadow-2xl hover-scale">
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="สมชาย ใจดี" class="w-16 h-16 rounded-full object-cover border-4 border-purple-400" />
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl mb-1">สมชาย ใจดี</h3>
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="flex gap-1">
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                </div>
+                                <span class="font-bold text-lg">9.5/10</span>
+                            </div>
+                            <p class="text-sm opacity-70">📅 15 มกราคม 2026</p>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-xl mb-6">
+                        <h4 class="font-bold text-lg mb-3 text-purple-400">สยองขวัญที่ลึกซึ้งและน่าติดตาม</h4>
+                        <p class="leading-relaxed opacity-90">ภาคต่อที่ดีกว่าภาคแรก! บรรยากาศสยองขวัญเข้มข้น การแสดงของนักแสดงทุกคนยอดเยี่ยม โดยเฉพาะฉากในโลกหลังความตาย ทำให้ขนลุกจริงๆ เอฟเฟกต์พิเศษก็สมจริงมาก แนะนำเลยครับ</p>
                     </div>
                 </div>
-                <div class="synopsis">
-                    <h3 style="color: var(--accent-purple); margin-bottom: 15px;">เรื่องย่อ</h3>
-                    <p>
-                        "สัปเหร่อ 2 โลกหลังความตาย" ภาคต่อของภาพยนตร์สยองขวัญไทยที่จะพาคุณเข้าสู่โลกหลังความตาย 
-                        ที่เต็มไปด้วยความลึกลับและความสยองขวัญที่คุณไม่เคยพบเจอมาก่อน การต่อสู้ระหว่างโลกมนุษย์และโลกวิญญาณ 
-                        ที่จะทำให้คุณต้องจับตาดูตั้งแต่ต้นจนจบ
+                
+                <!-- Review 2 -->
+                <div class="glass p-8 rounded-2xl shadow-2xl hover-scale">
+                    <div class="flex items-start gap-4 mb-6">
+                        <img src="https://i.pravatar.cc/150?img=5" alt="นันทนา วรรณา" class="w-16 h-16 rounded-full object-cover border-4 border-purple-400" />
+                        <div class="flex-1">
+                            <h3 class="font-bold text-xl mb-1">นันทนา วรรณา</h3>
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="flex gap-1">
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-yellow-400">⭐</span>
+                                    <span class="text-xl text-gray-400">⭐</span>
+                                </div>
+                                <span class="font-bold text-lg">8.5/10</span>
+                            </div>
+                            <p class="text-sm opacity-70">📅 18 มกราคม 2026</p>
+                        </div>
+                    </div>
+                    <div class="glass p-6 rounded-xl mb-6">
+                        <h4 class="font-bold text-lg mb-3 text-purple-400">น่าติดตาม แต่บางฉากสยองเกินไป</h4>
+                        <p class="leading-relaxed opacity-90">ชอบมากค่ะ โครงเรื่องน่าสนใจ การเล่าเรื่องลื่นไหลดี แต่บางฉากสยองเกินไปสำหรับคนที่กลัวผีมากๆ อย่างเราค่ะ 😅 แต่โดยรวมแล้วถือว่าดีมากเลย คุ้มค่ากับเงินที่จ่ายไป</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="glass py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-purple-300">เกี่ยวกับเรา</h3>
+                    <p class="opacity-80 leading-relaxed">
+                        สัปเหร่อ 2 โลกหลังความตาย - ภาพยนตร์สยองขวัญไทยที่จะพาคุณไปสู่โลกที่คุณไม่เคยรู้จัก
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trailer -->
-    <section>
-        <div class="container">
-            <h2 class="section-title fade-in">🎬 ตัวอย่างหนัง</h2>
-            <div class="trailer-container fade-in">
-                <iframe 
-                    src="https://www.youtube.com/embed/dD411PPZkPs?autoplay=0&rel=0" 
-                    title="The Undertaker 2 Trailer"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cast -->
-    <section>
-        <div class="container">
-            <h2 class="section-title fade-in">👥 นักแสดง</h2>
-            <div class="cast-grid fade-in">
-                <div class="cast-card">
-                    <img src="https://ui-avatars.com/api/?name=Actor+1&size=150&background=9333ea&color=fff" alt="นักแสดง 1" class="cast-avatar">
-                    <div class="cast-name">นักแสดงนำ 1</div>
-                    <div class="cast-character">บทบาทหลัก</div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-purple-300">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2 opacity-80">
+                        <li><button onclick="scrollToSection('home')" class="hover:text-purple-300 transition-colors">เกี่ยวกับภาพยนตร์</button></li>
+                        <li><button onclick="scrollToSection('trailer')" class="hover:text-purple-300 transition-colors">ตัวอย่าง</button></li>
+                        <li><button onclick="scrollToSection('cast')" class="hover:text-purple-300 transition-colors">นักแสดง</button></li>
+                        <li><button onclick="scrollToSection('reviews')" class="hover:text-purple-300 transition-colors">รีวิว</button></li>
+                    </ul>
                 </div>
-                <div class="cast-card">
-                    <img src="https://ui-avatars.com/api/?name=Actor+2&size=150&background=ec4899&color=fff" alt="นักแสดง 2" class="cast-avatar">
-                    <div class="cast-name">นักแสดงนำ 2</div>
-                    <div class="cast-character">บทบาทรอง</div>
-                </div>
-                <div class="cast-card">
-                    <img src="https://ui-avatars.com/api/?name=Actor+3&size=150&background=3b82f6&color=fff" alt="นักแสดง 3" class="cast-avatar">
-                    <div class="cast-name">นักแสดงนำ 3</div>
-                    <div class="cast-character">บทบาทสนับสนุน</div>
-                </div>
-                <div class="cast-card">
-                    <img src="https://ui-avatars.com/api/?name=Actor+4&size=150&background=f59e0b&color=fff" alt="นักแสดง 4" class="cast-avatar">
-                    <div class="cast-name">นักแสดงนำ 4</div>
-                    <div class="cast-character">บทบาทพิเศษ</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews -->
-    <section>
-        <div class="container">
-            <h2 class="section-title fade-in">⭐ รีวิวจากผู้ชม</h2>
-            <div class="reviews-grid fade-in">
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://ui-avatars.com/api/?name=User+1&size=50&background=9333ea&color=fff" alt="User 1" class="reviewer-avatar">
-                        <div>
-                            <div class="reviewer-name">ผู้ชมคนที่ 1</div>
-                            <div class="rating">⭐⭐⭐⭐⭐</div>
-                        </div>
+                
+                <!-- Social Media -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4 text-purple-300">ติดตามเรา</h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:scale-110 transition-transform">📘</a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-3xl hover:scale-110 transition-transform">📷</a>
                     </div>
-                    <p>หนังสยองขวัญไทยที่ดีที่สุดในรอบหลายปี! ภาพสวย เนื้อเรื่องน่าติดตาม</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://ui-avatars.com/api/?name=User+2&size=50&background=ec4899&color=fff" alt="User 2" class="reviewer-avatar">
-                        <div>
-                            <div class="reviewer-name">ผู้ชมคนที่ 2</div>
-                            <div class="rating">⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                    <p>ภาคต่อที่ดีกว่าภาคแรก! แนะนำเลยครับ</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-header">
-                        <img src="https://ui-avatars.com/api/?name=User+3&size=50&background=3b82f6&color=fff" alt="User 3" class="reviewer-avatar">
-                        <div>
-                            <div class="reviewer-name">ผู้ชมคนที่ 3</div>
-                            <div class="rating">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                    <p>น่ากลัวมากๆ แต่ก็สนุกมาก! ต้องดู!</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section>
-        <div class="container">
-            <h2 class="section-title fade-in">🖼️ แกลเลอรี่</h2>
-            <div class="gallery-grid fade-in">
-                <div class="gallery-item">
-                    <img src="https://image.tmdb.org/t/p/original/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg" alt="Gallery 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://image.tmdb.org/t/p/w500/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg" alt="Gallery 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://image.tmdb.org/t/p/w780/oiOxy2JtR23URJJEp6ryrMd8VH6.jpg" alt="Gallery 3">
-                </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 text-center opacity-60">
+                <p class="text-sm">Made with 💜 for Thai Horror Cinema</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 The Undertaker 2: Afterlife. All rights reserved.</p>
-            <p style="margin-top: 10px;">Made with ❤️ for Thai Horror Fans</p>
         </div>
     </footer>
-
-    <!-- Histats.com START (async) - Hidden Mode -->
+    
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" onclick="scrollToTop()" class="fixed right-6 bottom-6 w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-110 transition-all duration-300 shadow-2xl border-2 border-white/20" style="display: none;">
+        ⬆️
+    </button>
+    
+    <!-- Cast Modal -->
+    <div id="cast-modal" class="modal">
+        <div class="relative z-10 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="glass rounded-3xl border-2 border-purple-500 shadow-2xl p-8">
+                <!-- Close Button -->
+                <button onclick="closeCastModal()" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-red-500/80 hover:bg-red-600 text-white text-2xl font-bold hover:rotate-90 transition-all duration-300 shadow-xl z-10">
+                    ✕
+                </button>
+                
+                <!-- Cast Photo -->
+                <div class="flex flex-col items-center mb-6">
+                    <div class="relative w-48 h-48 mb-4">
+                        <img id="modal-cast-photo" src="" alt="" class="w-full h-full object-cover rounded-full border-4 border-purple-400 shadow-2xl" />
+                    </div>
+                    <h2 id="modal-cast-name" class="text-3xl font-bold text-center mb-2"></h2>
+                    <p id="modal-cast-character" class="text-xl text-purple-400 text-center mb-4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Histats Analytics -->
     <script type="text/javascript">
     var _Hasync= _Hasync|| [];
     _Hasync.push(['Histats.start', '1,4973373,4,1,120,40,00011000']);
@@ -639,69 +497,81 @@
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
     })();
     </script>
-    <noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4973373&101" alt="" border="0" style="display:none;"></a></noscript>
-    <!-- Histats.com END -->
-
+    
+    <!-- JavaScript -->
     <script>
-        // Progress Scroll Bar
-        window.addEventListener('scroll', () => {
-            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (window.scrollY / windowHeight) * 100;
-            document.getElementById('scroll-progress').style.width = scrolled + '%';
-        });
-
-        // Particle Background
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 20 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particlesContainer.appendChild(particle);
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const progress = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            document.getElementById('progress-bar').style.width = (progress * 100) + '%';
+            
+            // Show/Hide Scroll to Top Button
+            const scrollTopBtn = document.getElementById('scroll-to-top');
+            if (window.scrollY > 500) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
             }
+        });
+        
+        // Smooth Scroll
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
         }
-        createParticles();
-
-        // Scroll Reveal Animation
+        
+        // Scroll to Top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Toggle Mobile Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Cast Modal
+        function showCastModal(name, character, photo) {
+            document.getElementById('modal-cast-name').textContent = name;
+            document.getElementById('modal-cast-character').textContent = 'as ' + character;
+            document.getElementById('modal-cast-photo').src = photo;
+            document.getElementById('modal-cast-photo').alt = name;
+            document.getElementById('cast-modal').classList.add('active');
+        }
+        
+        function closeCastModal() {
+            document.getElementById('cast-modal').classList.remove('active');
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('cast-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCastModal();
+            }
+        });
+        
+        // Fade in elements on scroll
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
-
-        const observer = new IntersectionObserver((entries) => {
+        
+        const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add('fade-in');
                 }
             });
         }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Share Function
-        function shareMovie() {
-            if (navigator.share) {
-                navigator.share({
-                    title: 'The Undertaker 2: Afterlife - สัปเหร่อ 2',
-                    text: 'ดูหนังสยองขวัญไทยที่ดีที่สุด!',
-                    url: window.location.href
-                }).catch(err => console.log('Error sharing:', err));
-            } else {
-                alert('คัดลอกลิงก์: ' + window.location.href);
-            }
-        }
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+        
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
